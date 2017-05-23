@@ -7,7 +7,7 @@ sudo apt-get install ethereum;
 
 geth --datadir "./" account new 
 geth --datadir "./" init genesis.json;
-nohup geth --datadir "./" --rpc --nodiscover --rpcport 8545 --rpcaddr "0.0.0.0" rpccorsdomain "*" --networkid "10101010" > out.txt &
+nohup geth --datadir "./" --rpcapi eth,web3,personal --rpc --nodiscover --rpcport 8545 --rpcaddr "0.0.0.0" rpccorsdomain "*" --networkid "10101010" > out.txt &
 #echo "-----------------------------------";
 #echo "Your address:"
 #geth --exec "eth.account[0]" attach ./geth.ipc;
